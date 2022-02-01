@@ -17,147 +17,128 @@
 }
 
 body {
+  background-color: var(--Very-light-gray);
+  font-size: 15px;
+  font-family: var(--lexend-font-family);
   height: 100vh;
   width: 100%;
-  background-color: var(--Very-light-gray);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
 }
 
 main {
+  max-width: 920px;
+  margin: 0 auto;
+}
+
+.card {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 1fr 1fr 1fr;
       grid-template-columns: 1fr 1fr 1fr;
-  -ms-grid-rows: 1fr;
-      grid-template-rows: 1fr;
-  width: 50%;
-  position: relative;
+  border-radius: 10px;
 }
 
-main .card--size {
-  width: 100%;
-  padding: 3.5rem;
-}
-
-main .sedans {
+.card__sedans {
   background-color: var(--Bright-orange);
+  padding: 3rem;
+  border-radius: 10px 0 0 10px;
 }
 
-main .sedans__header {
-  color: white;
-  font-family: var(--shoulder-font-family);
-  margin-top: 2rem;
-}
-
-main .sedans__desc {
-  color: white;
-  font-family: var(--lexend-font-family);
-  margin-top: 2rem;
-  line-height: 1.8;
-  margin-bottom: 8rem;
-  font-weight: 400;
-  opacity: .7;
-}
-
-main .sedans__btn {
-  background-color: white;
-  text-decoration: none;
+.card__sedans__btn {
   color: var(--Bright-orange);
-  padding: 1rem 2rem;
-  border-radius: 50px;
-  margin-top: 3rem;
-  font-family: var(--lexend-font-family);
+  border: 2px solid white;
   -webkit-transition: .1s linear;
   transition: .1s linear;
 }
 
-main .sedans__btn:hover {
-  background-color: var(--Bright-orange);
+.card__sedans__btn:hover {
+  background-color: transparent;
   color: white;
-  border: 2px solid white;
 }
 
-main .suvs {
+.card__suvs {
   background-color: var(--Dark-cyan);
+  padding: 3rem;
 }
 
-main .suvs__header {
-  color: white;
-  font-family: var(--shoulder-font-family);
-  margin-top: 2rem;
-}
-
-main .suvs__desc {
-  color: white;
-  font-family: var(--lexend-font-family);
-  margin-top: 2rem;
-  line-height: 1.8;
-  margin-bottom: 8rem;
-  font-weight: 400;
-  opacity: .7;
-}
-
-main .suvs__btn {
-  background-color: white;
-  text-decoration: none;
+.card__suvs__btn {
   color: var(--Dark-cyan);
-  padding: 1rem 2rem;
-  border-radius: 50px;
-  margin-top: 3rem;
-  font-family: var(--lexend-font-family);
+  border: 2px solid white;
   -webkit-transition: .1s linear;
   transition: .1s linear;
 }
 
-main .suvs__btn:hover {
-  background-color: var(--Dark-cyan);
+.card__suvs__btn:hover {
+  background-color: transparent;
   color: white;
-  border: 2px solid white;
 }
 
-main .luxury {
+.card__luxury {
   background-color: var(--Very-dark-cyan);
+  padding: 3rem;
+  border-radius: 0 10px 10px 0;
 }
 
-main .luxury__header {
+.card__luxury__btn {
+  color: var(--Very-dark-cyan);
+  border: 2px solid white;
+  -webkit-transition: .1s linear;
+  transition: .1s linear;
+}
+
+.card__luxury__btn:hover {
+  background-color: transparent;
   color: white;
+}
+
+.card--header {
   font-family: var(--shoulder-font-family);
+  color: white;
   margin-top: 2rem;
 }
 
-main .luxury__desc {
-  color: white;
+.card--desc {
   font-family: var(--lexend-font-family);
-  margin-top: 2rem;
-  line-height: 1.8;
-  margin-bottom: 6rem;
+  color: white;
   font-weight: 400;
   opacity: .7;
+  margin-top: 2rem;
+  line-height: 1.6;
 }
 
-main .luxury__btn {
+.card--btn {
   background-color: white;
   text-decoration: none;
-  color: var(--Very-dark-cyan);
   padding: 1rem 2rem;
-  border-radius: 50px;
-  margin-top: 3rem;
-  font-family: var(--lexend-font-family);
-  -webkit-transition: .1s linear;
-  transition: .1s linear;
+  display: inline-block;
+  margin-top: 6rem;
+  border-radius: 30px;
 }
 
-main .luxury__btn:hover {
-  background-color: var(--Very-dark-cyan);
-  color: white;
-  border: 2px solid white;
+@media only screen and (max-width: 768px) {
+  body {
+    display: block;
+  }
+  main {
+    padding: 5rem 1.5rem;
+  }
+  .card {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+  .card__sedans {
+    border-radius: 10px 10px 0 0;
+  }
+  .card__luxury {
+    border-radius: 0 0 10px 10px;
+  }
+  .card--btn {
+    margin-top: 3rem;
+  }
 }
 /*# sourceMappingURL=main.css.map */

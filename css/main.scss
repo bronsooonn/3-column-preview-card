@@ -23,134 +23,124 @@
 }
 
 body {
+    background-color: var(--Very-light-gray);
+    font-size: 15px;
+    font-family: var(--lexend-font-family);
     height: 100vh;
     width: 100%;
-    background-color: var(--Very-light-gray);
     display: flex;
-    justify-content: center;
     align-items: center;
 }
 
 main {
+    max-width: 920px;
+    margin: 0 auto;
+}
+
+.card {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr;
-    width: 50%;
-    position: relative;
+    border-radius: 10px;
 
-    .card--size {
-        width: 100%;
-        padding: 3.5rem;
-    }
-
-    .sedans {
+    &__sedans {
         background-color: var(--Bright-orange);
-
-        &__header {
-            color: white;
-            font-family: var(--shoulder-font-family);
-            margin-top: 2rem;
-        }
-
-        &__desc {
-            color: white;
-            font-family: var(--lexend-font-family);
-            margin-top: 2rem;
-            line-height: 1.8;
-            margin-bottom: 8rem;
-            font-weight: 400;
-            opacity: .7;
-        }
+        padding: 3rem;
+        border-radius: 10px 0 0 10px;
 
         &__btn {
-            background-color: white;
-            text-decoration: none;
             color: var(--Bright-orange);
-            padding: 1rem 2rem;
-            border-radius: 50px;
-            margin-top: 3rem;
-            font-family: var(--lexend-font-family);
+            border: 2px solid white;
             transition: .1s linear;
 
             &:hover {
-                background-color: var(--Bright-orange);
+                background-color: transparent;
                 color: white;
-                border: 2px solid white;
             }
         }
     }
 
-    .suvs {
+    &__suvs {
         background-color: var(--Dark-cyan);
-
-        &__header {
-            color: white;
-            font-family: var(--shoulder-font-family);
-            margin-top: 2rem;
-        }
-
-        &__desc {
-            color: white;
-            font-family: var(--lexend-font-family);
-            margin-top: 2rem;
-            line-height: 1.8;
-            margin-bottom: 8rem;
-            font-weight: 400;
-            opacity: .7;
-        }
+        padding: 3rem;
 
         &__btn {
-            background-color: white;
-            text-decoration: none;
             color: var(--Dark-cyan);
-            padding: 1rem 2rem;
-            border-radius: 50px;
-            margin-top: 3rem;
-            font-family: var(--lexend-font-family);
+            border: 2px solid white;
             transition: .1s linear;
 
             &:hover {
-                background-color: var(--Dark-cyan);
+                background-color: transparent;
                 color: white;
-                border: 2px solid white;
+            }
+        }
+    }
+    
+    &__luxury {
+        background-color: var(--Very-dark-cyan);
+        padding: 3rem;
+        border-radius: 0 10px 10px 0;
+
+        &__btn {
+            color: var(--Very-dark-cyan);
+            border: 2px solid white;
+            transition: .1s linear;
+
+            &:hover {
+                background-color: transparent;
+                color: white;
             }
         }
     }
 
-    .luxury {
-        background-color: var(--Very-dark-cyan);
+    &--header {
+        font-family: var(--shoulder-font-family);
+        color: white;
+        margin-top: 2rem;
+    }
 
-        &__header {
-            color: white;
-            font-family: var(--shoulder-font-family);
-            margin-top: 2rem;
+    &--desc {
+        font-family: var(--lexend-font-family);
+        color: white;
+        font-weight: 400;
+        opacity: .7;
+        margin-top: 2rem;
+        line-height: 1.6;
+    }
+
+    &--btn {
+        background-color: white;
+        text-decoration: none;
+        padding: 1rem 2rem;
+        display: inline-block;
+        margin-top: 6rem;
+        border-radius: 30px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    body {
+        display: block;
+    }
+
+    main {
+        padding: 5rem 1.5rem;
+    }
+    
+    .card {
+        grid-template-columns: 1fr;
+
+        &__sedans {
+            border-radius: 10px 10px 0 0;
         }
 
-        &__desc {
-            color: white;
-            font-family: var(--lexend-font-family);
-            margin-top: 2rem;
-            line-height: 1.8;
-            margin-bottom: 6rem;
-            font-weight: 400;
-            opacity: .7;
+        &__luxury {
+            border-radius: 0 0 10px 10px;
         }
 
-        &__btn {
-            background-color: white;
-            text-decoration: none;
-            color: var(--Very-dark-cyan);
-            padding: 1rem 2rem;
-            border-radius: 50px;
+        &--btn {
             margin-top: 3rem;
-            font-family: var(--lexend-font-family);
-            transition: .1s linear;
-
-            &:hover {
-                background-color: var(--Very-dark-cyan);
-                color: white;
-                border: 2px solid white;
-            }
         }
     }
 }
+
+

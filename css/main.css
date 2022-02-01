@@ -1,0 +1,163 @@
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+:root {
+  --Bright-orange: hsl(31, 77%, 52%);
+  --Dark-cyan: hsl(184, 100%, 22%);
+  --Very-dark-cyan: hsl(179, 100%, 13%);
+  --Transparent-white: hsla(0, 0%, 100%, 0.75);
+  --Very-light-gray: hsl(0, 0%, 95%);
+  --lexend-font-family: 'Lexend Deca', sans-serif;
+  --shoulder-font-family: 'Big Shoulders Display', cursive;
+}
+
+body {
+  height: 100vh;
+  width: 100%;
+  background-color: var(--Very-light-gray);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+  -ms-grid-rows: 1fr;
+      grid-template-rows: 1fr;
+  width: 50%;
+  position: relative;
+}
+
+main .card--size {
+  width: 100%;
+  padding: 3.5rem;
+}
+
+main .sedans {
+  background-color: var(--Bright-orange);
+}
+
+main .sedans__header {
+  color: white;
+  font-family: var(--shoulder-font-family);
+  margin-top: 2rem;
+}
+
+main .sedans__desc {
+  color: white;
+  font-family: var(--lexend-font-family);
+  margin-top: 2rem;
+  line-height: 1.8;
+  margin-bottom: 8rem;
+  font-weight: 400;
+  opacity: .7;
+}
+
+main .sedans__btn {
+  background-color: white;
+  text-decoration: none;
+  color: var(--Bright-orange);
+  padding: 1rem 2rem;
+  border-radius: 50px;
+  margin-top: 3rem;
+  font-family: var(--lexend-font-family);
+  -webkit-transition: .1s linear;
+  transition: .1s linear;
+}
+
+main .sedans__btn:hover {
+  background-color: var(--Bright-orange);
+  color: white;
+  border: 2px solid white;
+}
+
+main .suvs {
+  background-color: var(--Dark-cyan);
+}
+
+main .suvs__header {
+  color: white;
+  font-family: var(--shoulder-font-family);
+  margin-top: 2rem;
+}
+
+main .suvs__desc {
+  color: white;
+  font-family: var(--lexend-font-family);
+  margin-top: 2rem;
+  line-height: 1.8;
+  margin-bottom: 8rem;
+  font-weight: 400;
+  opacity: .7;
+}
+
+main .suvs__btn {
+  background-color: white;
+  text-decoration: none;
+  color: var(--Dark-cyan);
+  padding: 1rem 2rem;
+  border-radius: 50px;
+  margin-top: 3rem;
+  font-family: var(--lexend-font-family);
+  -webkit-transition: .1s linear;
+  transition: .1s linear;
+}
+
+main .suvs__btn:hover {
+  background-color: var(--Dark-cyan);
+  color: white;
+  border: 2px solid white;
+}
+
+main .luxury {
+  background-color: var(--Very-dark-cyan);
+}
+
+main .luxury__header {
+  color: white;
+  font-family: var(--shoulder-font-family);
+  margin-top: 2rem;
+}
+
+main .luxury__desc {
+  color: white;
+  font-family: var(--lexend-font-family);
+  margin-top: 2rem;
+  line-height: 1.8;
+  margin-bottom: 6rem;
+  font-weight: 400;
+  opacity: .7;
+}
+
+main .luxury__btn {
+  background-color: white;
+  text-decoration: none;
+  color: var(--Very-dark-cyan);
+  padding: 1rem 2rem;
+  border-radius: 50px;
+  margin-top: 3rem;
+  font-family: var(--lexend-font-family);
+  -webkit-transition: .1s linear;
+  transition: .1s linear;
+}
+
+main .luxury__btn:hover {
+  background-color: var(--Very-dark-cyan);
+  color: white;
+  border: 2px solid white;
+}
+/*# sourceMappingURL=main.css.map */
